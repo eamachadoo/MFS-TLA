@@ -1,0 +1,554 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 11 and seed 5935228497117993676 with 5 workers on 10 cores with 1214MB heap and 2730MB offheap memory [pid: 16747] (Mac OS X 26.5 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/eamachado/Library/CloudStorage/OneDrive-AufermaInvestimentosImobiliários/universidade/MFS/project/Elevator.toolbox/model_baseline/MC.tla
+Parsing file /Users/eamachado/Library/CloudStorage/OneDrive-AufermaInvestimentosImobiliários/universidade/MFS/project/Elevator.toolbox/model_baseline/Elevator.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/1D14B7E0-8B4F-4119-A152-23DC91546F6E/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/1D14B7E0-8B4F-4119-A152-23DC91546F6E/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/1D14B7E0-8B4F-4119-A152-23DC91546F6E/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/1D14B7E0-8B4F-4119-A152-23DC91546F6E/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/1D14B7E0-8B4F-4119-A152-23DC91546F6E/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Elevator
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2026-04-12 12:13:14)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 2 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 32 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 64 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 128 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 243 distinct states generated at 2026-04-12 12:13:15.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 46, col 19 to line 46, col 34 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 5 to line 48, col 37 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 8 to line 48, col 37 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 8 to line 47, col 29 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 8 to line 47, col 14 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 8 to line 47, col 8 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 18 to line 47, col 29 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 18 to line 47, col 23 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 46, col 19 to line 46, col 31 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 46, col 33 to line 46, col 33 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 8 to line 48, col 18 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 8 to line 48, col 8 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 22 to line 48, col 37 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 22 to line 48, col 27 of module Elevator>. Reporting costs into <line 135, col 46 to line 135, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant DoorsClosedWhileMoving is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ ActiveElevatorCalls = {}
+/\ PersonState = ( p1 :> [destination |-> 1, location |-> 1, waiting |-> FALSE] @@
+  p2 :> [destination |-> 1, location |-> 2, waiting |-> FALSE] )
+/\ ElevatorState = ( e1 :>
+      [ floor |-> 1,
+        direction |-> "Stationary",
+        doorsOpen |-> FALSE,
+        buttonsPressed |-> {} ] )
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <CallElevator line 121, col 5 to line 130, col 34 of module Elevator>
+/\ ActiveElevatorCalls = {[floor |-> 2, direction |-> "Down"]}
+/\ PersonState = ( p1 :> [destination |-> 1, location |-> 1, waiting |-> FALSE] @@
+  p2 :> [destination |-> 1, location |-> 2, waiting |-> TRUE] )
+/\ ElevatorState = ( e1 :>
+      [ floor |-> 1,
+        direction |-> "Stationary",
+        doorsOpen |-> FALSE,
+        buttonsPressed |-> {} ] )
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <DispatchElevator line 222, col 5 to line 231, col 53 of module Elevator>
+/\ ActiveElevatorCalls = {[floor |-> 2, direction |-> "Down"]}
+/\ PersonState = ( p1 :> [destination |-> 1, location |-> 1, waiting |-> FALSE] @@
+  p2 :> [destination |-> 1, location |-> 2, waiting |-> TRUE] )
+/\ ElevatorState = ( e1 :>
+      [ floor |-> 2,
+        direction |-> "Down",
+        doorsOpen |-> FALSE,
+        buttonsPressed |-> {} ] )
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <OpenElevatorDoors line 134, col 5 to line 139, col 32 of module Elevator>
+/\ ActiveElevatorCalls = {}
+/\ PersonState = ( p1 :> [destination |-> 1, location |-> 1, waiting |-> FALSE] @@
+  p2 :> [destination |-> 1, location |-> 2, waiting |-> TRUE] )
+/\ ElevatorState = ( e1 :>
+      [ floor |-> 2,
+        direction |-> "Down",
+        doorsOpen |-> TRUE,
+        buttonsPressed |-> {} ] )
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2026-04-12 12:13:17
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 233, col 1 to line 233, col 4 of module Elevator>: 486:486
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 234, col 8 to line 234, col 93 of module Elevator: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 235, col 8 to line 235, col 31 of module Elevator: 162
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 236, col 8 to line 236, col 126 of module Elevator: 486
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 236, col 26 to line 236, col 126 of module Elevator: 162:486
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<PickNewDestination line 107, col 1 to line 107, col 21 of module Elevator (109 5 114 55)>: 0:1998
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 109, col 8 to line 109, col 22 of module Elevator: 2509
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 109, col 9 to line 109, col 22 of module Elevator: 1510
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 110, col 8 to line 110, col 32 of module Elevator: 1998
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 110, col 8 to line 110, col 22 of module Elevator: 999
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 110, col 28 to line 110, col 32 of module Elevator: 999
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 112, col 12 to line 112, col 31 of module Elevator: 4995
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 112, col 12 to line 112, col 12 of module Elevator: 2997
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 112, col 17 to line 112, col 31 of module Elevator: 2997
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 113, col 12 to line 113, col 82 of module Elevator: 1998
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 111, col 17 to line 111, col 21 of module Elevator: 999
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 114, col 8 to line 114, col 55 of module Elevator: 1998
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CallElevator line 116, col 1 to line 116, col 15 of module Elevator (121 5 130 34)>: 432:613
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 121, col 8 to line 121, col 22 of module Elevator: 2123
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 121, col 9 to line 121, col 22 of module Elevator: 1510
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 122, col 8 to line 122, col 44 of module Elevator: 1612
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 122, col 8 to line 122, col 22 of module Elevator: 999
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 122, col 27 to line 122, col 44 of module Elevator: 999
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 123, col 8 to line 128, col 44 of module Elevator: 613
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 129, col 8 to line 129, col 77 of module Elevator: 613
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 130, col 8 to line 130, col 34 of module Elevator: 613
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<OpenElevatorDoors line 132, col 1 to line 132, col 20 of module Elevator (134 5 139 32)>: 5:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 134, col 8 to line 134, col 24 of module Elevator: 755
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 134, col 9 to line 134, col 24 of module Elevator: 754
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 135, col 46 to line 135, col 59 of module Elevator: 511
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 45, col 1 to line 48, col 37 of module Elevator: 511
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 47, col 8 to line 47, col 29 of module Elevator: 512
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 47, col 8 to line 47, col 14 of module Elevator: 511
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 47, col 18 to line 47, col 29 of module Elevator: 511
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 48, col 8 to line 48, col 37 of module Elevator: 175
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 48, col 8 to line 48, col 18 of module Elevator: 174
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 48, col 22 to line 48, col 37 of module Elevator: 174
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 45, col 22 to line 45, col 29 of module Elevator: 511
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 45, col 38 to line 45, col 49 of module Elevator: 511
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 135, col 46 to line 135, col 68 of module Elevator: 511
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 135, col 24 to line 135, col 42 of module Elevator: 754
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 136, col 12 to line 136, col 49 of module Elevator: 749
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 137, col 8 to line 137, col 122 of module Elevator: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 137, col 25 to line 137, col 122 of module Elevator: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 138, col 8 to line 138, col 110 of module Elevator: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 138, col 31 to line 138, col 110 of module Elevator: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 139, col 8 to line 139, col 32 of module Elevator: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<EnterElevator line 141, col 1 to line 141, col 16 of module Elevator (147 5 155 40)>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 147, col 8 to line 147, col 23 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 150, col 8 to line 153, col 28 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 154, col 8 to line 154, col 103 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 155, col 8 to line 155, col 40 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ExitElevator line 157, col 1 to line 157, col 15 of module Elevator (162 5 168 55)>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 162, col 8 to line 162, col 23 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 164, col 8 to line 167, col 28 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 168, col 8 to line 168, col 55 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<CloseElevatorDoors line 170, col 1 to line 170, col 21 of module Elevator (172 5 176 53)>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 172, col 8 to line 172, col 32 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 172, col 9 to line 172, col 32 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 143, col 17 to line 143, col 32 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 147, col 8 to line 147, col 23 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 150, col 8 to line 153, col 28 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 154, col 8 to line 154, col 103 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 155, col 8 to line 155, col 40 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 172, col 31 to line 172, col 31 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 173, col 8 to line 173, col 31 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 173, col 9 to line 173, col 31 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 159, col 17 to line 159, col 32 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 162, col 8 to line 162, col 23 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 164, col 8 to line 167, col 28 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 168, col 8 to line 168, col 55 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 173, col 30 to line 173, col 30 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 174, col 8 to line 174, col 23 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 175, col 8 to line 175, col 84 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 176, col 8 to line 176, col 53 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MoveElevator line 178, col 1 to line 178, col 15 of module Elevator (183 5 193 53)>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 183, col 8 to line 183, col 39 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 192, col 8 to line 192, col 84 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 193, col 8 to line 193, col 53 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<StopElevator line 195, col 1 to line 195, col 15 of module Elevator (200 5 204 53)>: 0:250
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 200, col 8 to line 200, col 36 of module Elevator: 998
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 200, col 9 to line 200, col 36 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 133, col 19 to line 133, col 34 of module Elevator: 2244
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 134, col 8 to line 134, col 24 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 135, col 46 to line 135, col 68 of module Elevator: 5384
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 135, col 46 to line 135, col 59 of module Elevator: 505
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 135, col 46 to line 135, col 68 of module Elevator: 505
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 135, col 24 to line 135, col 42 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 136, col 12 to line 136, col 49 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 137, col 8 to line 137, col 122 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 138, col 8 to line 138, col 110 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 139, col 8 to line 139, col 32 of module Elevator: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 200, col 35 to line 200, col 35 of module Elevator: 2749
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 201, col 8 to line 201, col 24 of module Elevator: 998
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 201, col 9 to line 201, col 24 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 202, col 8 to line 202, col 29 of module Elevator: 998
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 202, col 8 to line 202, col 16 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 202, col 25 to line 202, col 29 of module Elevator: 748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 203, col 8 to line 203, col 91 of module Elevator: 250
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 204, col 8 to line 204, col 53 of module Elevator: 250
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<DispatchElevator line 214, col 1 to line 214, col 19 of module Elevator (222 5 231 53)>: 108:505
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 222, col 8 to line 222, col 32 of module Elevator: 4991
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 222, col 8 to line 222, col 8 of module Elevator: 4486
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 222, col 14 to line 222, col 32 of module Elevator: 4486
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 223, col 8 to line 223, col 40 of module Elevator: 1010
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 223, col 8 to line 223, col 34 of module Elevator: 505
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 223, col 39 to line 223, col 40 of module Elevator: 505
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 224, col 8 to line 230, col 26 of module Elevator: 505
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 231, col 8 to line 231, col 53 of module Elevator: 505
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeInvariant line 56, col 1 to line 56, col 13 of module Elevator>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 5 to line 59, col 142 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<SafetyInvariant line 61, col 1 to line 61, col 15 of module Elevator>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 5 to line 71, col 79 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 8 to line 66, col 49 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 67, col 8 to line 70, col 112 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 68, col 9 to line 70, col 112 of module Elevator: 1576
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 67, col 17 to line 67, col 22 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 71, col 8 to line 71, col 79 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 71, col 39 to line 71, col 79 of module Elevator: 618
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 71, col 17 to line 71, col 35 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<DoorsClosedWhileMoving line 82, col 1 to line 82, col 22 of module Elevator>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 5 to line 84, col 81 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 84, col 9 to line 84, col 81 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 84, col 9 to line 84, col 50 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 84, col 55 to line 84, col 81 of module Elevator: 113
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 83, col 14 to line 83, col 21 of module Elevator: 788
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(4) at 2026-04-12 12:13:17: 2,931 states generated (39,545 s/min), 788 distinct states found (10,631 ds/min), 211 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+2931 states generated, 788 distinct states found, 211 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 4.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 4482ms at (2026-04-12 12:13:17)
+@!@!@ENDMSG 2186 @!@!@

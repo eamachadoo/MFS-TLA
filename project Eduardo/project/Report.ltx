@@ -1,0 +1,205 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{pgfplots} % Added for graphing
+\pgfplotsset{compat=1.18}
+\geometry{margin=1in}
+
+\title{Project 1: Elevator System Specification and Refinement \\ \large MFS Course 2025/26}
+\author{Eduardo Machado - up202105337 \\ Lino - [ID] \\ Giovanni - [ID]}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Part 1: Baseline Validation and Model Understanding}
+
+\subsection{Baseline Configuration and Liveness Overhead}
+To establish a baseline, we validated \texttt{Elevator.tla} using a minimal instance. We specifically isolated the \texttt{TemporalInvariant} to measure its impact on the model checker's performance.
+
+\textbf{Model Parameters:}
+\begin{itemize}
+    \item \textbf{People:} $\{p_1, p_2\}$, \textbf{Elevators:} $\{e_1\}$, \textbf{Floors:} $3$
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{0.8\textwidth}{lXX}
+\toprule
+\textbf{Metric} & \textbf{Safety Only} & \textbf{Full (Liveness)} \\
+\midrule
+Distinct States & 2,685 & 2,685 \\
+Diameter & 14 & 14 \\
+Execution Time & \textbf{3s} & \textbf{11s} \\
+Result & Passed & Passed \\
+\bottomrule
+\end{tabularx}
+\caption{Baseline results demonstrating the $\approx 266\%$ time overhead for cycle detection in liveness checking.}
+\end{table}
+
+\subsection{State Space Explosion and Sensitivity Analysis}
+We explored how the state space grows when scaling different parameters. We observed that increasing the number of people (\texttt{Congestion}) impacts the state space more severely than increasing the number of elevators (\texttt{TwoElevators}).
+
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{lXXXr}
+\toprule
+\textbf{Model} & \textbf{Config (E, P, F)} & \textbf{Distinct States} & \textbf{Time (Safety)} & \textbf{Liveness Status} \\
+\midrule
+Baseline & 1E, 2P, 3F & 2,685 & 3s & Verified (11s) \\
+TwoElevators & 2E, 2P, 3F & 50,653 & 10s & Timeout (>12m) \\
+Congestion & 1E, 4P, 3F & 906,693 & 31s & Prohibitive \\
+\bottomrule
+\end{tabularx}
+\caption{Scaling sensitivity results.}
+\end{table}
+
+\subsubsection{Visualizing Growth}
+The following trend demonstrates that the complexity of the system is not linear. Adding a second elevator increased the state space by $\approx 18x$, while doubling the number of people increased it by over $\approx 330x$.
+
+% Simple Bar Chart using pgfplots
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    width=0.95\textwidth,
+    height=0.45\textwidth,
+    enlarge x limits=0.28,
+    ylabel={Distinct States},
+    symbolic x coords={Baseline, TwoElevators, Congestion},
+    xtick=data,
+    xticklabel style={rotate=20, anchor=east},
+    ymajorgrids=true,
+    ymin=0,
+    nodes near coords,
+    nodes near coords style={font=\scriptsize},
+    nodes near coords align={vertical},
+    point meta=y,
+    every node near coord/.append style={
+        /pgf/number format/fixed,
+        /pgf/number format/precision=0
+    },
+    title={State Space Explosion by Configuration},
+    title style={font=\small}
+]
+\addplot coordinates {(Baseline,2685) (TwoElevators,50653) (Congestion,906693)};
+\end{axis}
+\end{tikzpicture}
+\caption{Distinct states by configuration.}
+\end{figure}
+
+\subsection{Documentation of expensive properties}
+As evidenced by the \texttt{TwoElevators} run, the \texttt{TemporalInvariant} is significantly more "expensive" than safety invariants. While TLC explored all 50,653 states and verified safety in 10 seconds, it failed to complete the liveness check (cycle detection) within 12 minutes. This is because cycle detection requires searching for loops in the behavior graph, which has a higher computational complexity than the state-by-state validation used for safety.
+
+\subsection{Operational Role of Actions}
+The operational logic of the elevator system is governed by the following key actions:
+
+\begin{itemize}
+    \item \textbf{\texttt{PickNewDestination(p)}}: Represents a person's decision to travel. It updates a person's \texttt{destination} without immediately requesting the elevator.
+    \item \textbf{\texttt{CallElevator(p)}}: The person requests service from their current floor, adding a request to \texttt{ActiveElevatorCalls}.
+    \item \textbf{\texttt{DispatchElevator(c)}}: The system's controller assigns an elevator to a call based on proximity and current direction.
+    \item \textbf{\texttt{MoveElevator(e)}}: Moves the elevator car between floors, provided the doors are closed and a direction is set.
+    \item \textbf{\texttt{OpenElevatorDoors(e)}}: Occurs when an elevator arrives at a floor with a pending call or an internal button press.
+    \item \textbf{\texttt{EnterElevator(e)}}: Facilitates the boarding process for people waiting for the elevator's current direction.
+    \item \textbf{\texttt{ExitElevator(e)}}: People whose destination matches the current floor leave the car, resetting their \texttt{waiting} status to \texttt{FALSE}.
+    \item \textbf{\texttt{CloseElevatorDoors(e)}}: Ensures the elevator cannot move until all eligible boarding/exiting actions are completed.
+    \item \textbf{\texttt{StopElevator(e)}}: Resets an elevator to a \texttt{Stationary} state once all its assigned calls are fulfilled.
+\end{itemize}
+
+\section{Part 2: Fairness and Liveness Sensitivity Study}
+
+\subsection{Controlled Fairness Experiment}
+To analyze the impact of fairness assumptions on system progress, we conducted a sensitivity study by weakening the fairness requirements for the \texttt{DispatchElevator} action. Specifically, the \texttt{Strong Fairness} (SF) assumption on the dispatcher was replaced with \texttt{Weak Fairness} (WF) in the \texttt{TemporalAssumptions} definition:
+
+\begin{itemize}
+    \item \textbf{Original:} $\forall c \in \texttt{ElevatorCall} : \texttt{SF\_Vars(DispatchElevator(c))}$
+    \item \textbf{Modified:} $\forall c \in \texttt{ElevatorCall} : \texttt{WF\_Vars(DispatchElevator(c))}$
+\end{itemize}
+
+\subsection{Results and Liveness Violation}
+Testing this modification on the baseline model (1 Elevator, 2 People, 3 Floors) resulted in a \textbf{Temporal Property Violation}. TLC identified a starvation scenario where the \texttt{TemporalInvariant} failed to hold.
+
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{0.8\textwidth}{lX}
+\toprule
+\textbf{Fairness Assumption} & \textbf{Liveness Result} \\
+\midrule
+Strong Fairness (SF) & Passed (Verified in 11s) \\
+Weak Fairness (WF) & \textbf{Failed} (Counterexample found in 7s) \\
+\bottomrule
+\end{tabularx}
+\caption{Comparison of fairness impacts on liveness verification.}
+\end{table}
+
+\subsection{Counterexample Analysis: Passenger Starvation}
+The error trace provided by TLC revealed a "livelock" or starvation cycle. In this scenario, passenger $p_1$ at Floor 1 issues an "Up" call to Floor 2. However, $p_1$ is never serviced because the system enters an infinite loop where the elevator prioritizes passenger $p_2$.
+
+\textbf{Mechanism of Failure:}
+\begin{enumerate}
+    \item $p_1$ sets \texttt{waiting = TRUE}, enabling the \texttt{DispatchElevator} action for that floor.
+    \item Passenger $p_2$ repeatedly requests rides between Floors 2 and 3.
+    \item As the elevator moves to service $p_2$ or opens its doors, the conditions that make the elevator "available" to be dispatched for $p_1$ (e.g., being stationary or moving in the correct direction) are momentarily interrupted.
+    \item Under \textbf{Weak Fairness}, the system is only required to execute an action if it remains \texttt{ENABLED} \textit{continuously}. Because the enablement of the dispatcher for $p_1$ "flickers" as the elevator services $p_2$, the system is mathematically permitted to ignore $p_1$ indefinitely.
+\end{enumerate}
+
+\subsection{Conclusion on Fairness Sensitivity}
+This experiment demonstrates that \textbf{Strong Fairness} is a strict requirement for the \texttt{DispatchElevator} action. Unlike \texttt{Weak Fairness}, \texttt{Strong Fairness} guarantees that if an action is enabled \textit{infinitely often} (even if interrupted), it must eventually occur. In a multi-passenger environment where concurrent requests compete for resources, SF ensures that every call is eventually dispatched, regardless of how "busy" the elevator is with other passengers.
+
+\section{Part 3: Custom Properties and Verification}
+
+In accordance with the project requirements for a three-member group, we implemented and verified three additional properties. These properties cover individual elevator safety, multi-elevator coordination, and passenger progress.
+
+\subsection{Property 1: Physical Motion Safety}
+\textbf{Definition:} This invariant ensures an elevator car does not transition floors while doors are open.
+$\mathrm{DoorsClosedWhileMoving} := \forall e \in \mathrm{Elevator}:\ \mathrm{ElevatorState}[e].\mathrm{direction} \neq \text{"Stationary"} \Rightarrow \neg\mathrm{ElevatorState}[e].\mathrm{doorsOpen}$
+
+\begin{itemize}
+    \item \textbf{Status:} \textbf{Failed}.
+    \item \textbf{Analysis:} TLC identified a violation during the \texttt{DispatchElevator} action. In this specification, the \texttt{direction} variable represents the \textit{intent} or assignment of the car. Since the car is assigned a direction before the doors finish closing at its current floor, the property is violated.
+    \item \textbf{Insight:} This failure highlights the distinction between high-level logic (intent) and physical system states (motion) within a TLA+ specification.
+\end{itemize}
+
+\subsection{Property 2: Multi-Elevator Coordination}
+\textbf{Definition:} This invariant ensures that two different elevators never open their doors on the same floor simultaneously, preventing redundant service and passenger confusion.
+$\mathrm{NoDualDoorOpen} := \forall e_1, e_2 \in \mathrm{Elevator}:\ (e_1 \neq e_2 \land \mathrm{ElevatorState}[e_1].\mathrm{doorsOpen} \land \mathrm{ElevatorState}[e_2].\mathrm{doorsOpen}) \Rightarrow \mathrm{ElevatorState}[e_1].\mathrm{floor} \neq \mathrm{ElevatorState}[e_2].\mathrm{floor}$
+
+\begin{itemize}
+    \item \textbf{Status:} \textbf{Passed}.
+    \item \textbf{Configuration:} Verified on \texttt{model\_TwoElevators} (50,653 states).
+    \item \textbf{Analysis:} The success of this property confirms that the dispatcher logic effectively partitions the floor space, ensuring that once a call is assigned, other cars do not interfere with that specific floor request.
+\end{itemize}
+
+\subsection{Property 3: Guaranteed Boarding (Liveness)}
+\textbf{Definition:} This temporal property ensures that a passenger in a \texttt{waiting} state will eventually enter an elevator car, verifying the absence of "platform starvation."
+$\mathrm{EventuallyPickedUp} := \forall p \in \mathrm{Person}:\ \mathrm{PersonState}[p].\mathrm{waiting}\;\sim\!>\;(\mathrm{PersonState}[p].\mathrm{location} \in \mathrm{Elevator})$
+
+\begin{itemize}
+    \item \textbf{Status:} \textbf{Passed}.
+    \item \textbf{Configuration:} Verified on \texttt{model\_baseline} (2,685 states).
+    \item \textbf{Analysis:} Unlike the safety invariants, this property is a "Progress" guarantee. It relies entirely on the \textbf{Strong Fairness} assumptions established in Part 2. Its success confirms that our fairness constraints are sufficient to ensure that the dispatcher cannot ignore a call indefinitely, even if other concurrent requests are available.
+\end{itemize}
+
+\subsection{Comparative Summary of Properties}
+The following table summarizes the differences in verification complexity and results across the three custom properties.
+
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{lXXX}
+\toprule
+\textbf{Property} & \textbf{Type} & \textbf{Status} & \textbf{Fairness Sensitivity} \\
+\midrule
+DoorsClosedWhileMoving & Safety Invariant & Failed & Low (Structural) \\
+NoDualDoorOpen & Safety Invariant & Passed & Low (Structural) \\
+EventuallyPickedUp & Liveness Property & Passed & High (Required SF) \\
+\bottomrule
+\end{tabularx}
+\caption{Comparison of custom properties and verification results.}
+\end{table}
+
+\end{document}

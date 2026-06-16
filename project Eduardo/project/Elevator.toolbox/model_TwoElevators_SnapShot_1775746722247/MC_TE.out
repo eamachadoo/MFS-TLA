@@ -1,0 +1,122 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 44 and seed 1746346771973521580 with 5 workers on 10 cores with 1214MB heap and 2730MB offheap memory [pid: 98731] (Mac OS X 26.4 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/eamachado/Library/CloudStorage/OneDrive-AufermaInvestimentosImobiliários/universidade/MFS/project/Elevator.toolbox/model_TwoElevators/MC.tla
+Parsing file /Users/eamachado/Library/CloudStorage/OneDrive-AufermaInvestimentosImobiliários/universidade/MFS/project/Elevator.toolbox/model_TwoElevators/Elevator.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/4A0D364D-2328-40E6-96D8-58C9B7BE795B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/4A0D364D-2328-40E6-96D8-58C9B7BE795B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/4A0D364D-2328-40E6-96D8-58C9B7BE795B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/4A0D364D-2328-40E6-96D8-58C9B7BE795B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/jh/1zw5kyh51gxb_4t3rfw_bp0w0000gn/T/AppTranslocation/4A0D364D-2328-40E6-96D8-58C9B7BE795B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Elevator
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2026-04-09 15:46:26)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 8 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 32 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 64 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 128 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 256 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 512 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 729 distinct states generated at 2026-04-09 15:46:28.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 46, col 19 to line 46, col 34 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 5 to line 48, col 37 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 8 to line 48, col 37 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 8 to line 47, col 29 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 8 to line 47, col 14 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 8 to line 47, col 8 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 18 to line 47, col 29 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 47, col 18 to line 47, col 23 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 46, col 19 to line 46, col 31 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 8 to line 48, col 18 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 8 to line 48, col 8 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 22 to line 48, col 37 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 48, col 22 to line 48, col 27 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2776:0 @!@!@
+CostModel lookup failed for expression <line 46, col 33 to line 46, col 33 of module Elevator>. Reporting costs into <line 107, col 46 to line 107, col 68 of module Elevator> instead (Safety and Liveness checking is unaffected. Please report a bug.)
+@!@!@ENDMSG 2776 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 8 branches of temporal properties for the current state space with 18696 total distinct states at (2026-04-09 15:46:31)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 04s at 2026-04-09 15:46:35
+@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(3) at 2026-04-09 15:46:35: 8,180 states generated (8,180 s/min), 2,337 distinct states found (2,337 ds/min), 896 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(39) at 2026-04-09 15:46:59: 230,899 states generated, 50,653 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 8 branches of temporal properties for the complete state space with 405224 total distinct states at (2026-04-09 15:46:59)
+@!@!@ENDMSG 2192 @!@!@
